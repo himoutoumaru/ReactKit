@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Switch, Route, Redirect, Link} from 'react-rout
 import Home from '../containers/Home/Index'
 import Sample from '../containers/Sample/Index'
 
+
 const Routes = () => (
     <div className="app">
 
