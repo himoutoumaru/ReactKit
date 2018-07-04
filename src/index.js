@@ -1,3 +1,8 @@
-import img from 'images/1.jpg'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Root from './root';
 
-alert(VERSION)
+ReactDOM.render(
+    <Root/>,
+    document.getElementById('root')
+);

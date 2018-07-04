@@ -4,8 +4,8 @@ const path = require('path');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 var Dashboard = require('webpack-dashboard');
-var DashboardPlugin = require('webpack-dashboard/plugin');
-var dashboard = new Dashboard();
+// var DashboardPlugin = require('webpack-dashboard/plugin');
+// var dashboard = new Dashboard();
 
 const ROOT_PATH = path.resolve(__dirname);
 const APP_PATH = path.resolve(ROOT_PATH, 'src');
@@ -90,6 +90,6 @@ module.exports = {
             VERSION: JSON.stringify('1.0'),
         }),
         new BundleAnalyzerPlugin(),
-        new DashboardPlugin(dashboard.setData)
+        // new DashboardPlugin(dashboard.setData)
     ]
 };
