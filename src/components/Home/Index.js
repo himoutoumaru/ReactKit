@@ -11,7 +11,7 @@ export default class extends Component {
     }
 
     add() {
-        this.props.sampleAction.add();
+        this.props.sampleAction.add(1);
     }
 
     render() {

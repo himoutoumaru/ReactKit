@@ -6,8 +6,8 @@ const initialState = {
 const sample = (state = initialState, action) => {
     switch (action.type) {
         case actionTypes.SAMPLE_ADD:
-            state.count += 1;
-            return Object.assign({}, state);;
+            state.count += action.data;
+            return Object.assign({}, state);
         default:
             return state
     }
