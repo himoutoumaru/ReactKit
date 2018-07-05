@@ -1,4 +1,5 @@
 import qs from 'qs';
+import 'babel-polyfill';
 
 const defaultHeaders = {
     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
