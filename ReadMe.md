@@ -1,9 +1,9 @@
-#ReactKit
+# ReactKit
 
 ReactKit是一个整合了React、Redux、React-Router的脚手架，
 减少开发新的UI项目的时候重复搭建脚手架的时间
 
-#目录结构
+# 目录结构
 
 public:存放静态资源文件
 
