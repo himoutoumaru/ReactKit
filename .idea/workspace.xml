@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a25f0934-76ed-4595-9678-05b4cafe6b2e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,8 +21,8 @@
         <entry file="file://$PROJECT_DIR$/ReadMe.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="621">
-                <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+              <first_editor relative-caret-position="216">
+                <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
               </first_editor>
               <second_editor />
             </state>
@@ -172,7 +172,7 @@
       <updated>1530670331332</updated>
       <workItem from="1530670332707" duration="192000" />
       <workItem from="1530684378598" duration="10857000" />
-      <workItem from="1530708701894" duration="3718000" />
+      <workItem from="1530708701894" duration="3866000" />
     </task>
     <task id="LOCAL-00001" summary="add react and redux">
       <created>1530693021721</created>
@@ -230,11 +230,25 @@
       <option name="project" value="LOCAL" />
       <updated>1530758610859</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="添加ReadMe">
+      <created>1530759283089</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1530759283089</updated>
+    </task>
+    <task id="LOCAL-00010" summary="添加ReadMe">
+      <created>1530759343522</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1530759343522</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16886000" />
+    <option name="totallyTimeSpent" value="17034000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="793" extended-state="0" />
@@ -295,7 +309,8 @@
     <MESSAGE value="添加Reduxdevtools" />
     <MESSAGE value="starterkit" />
     <MESSAGE value="添加babel-polyfill" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加babel-polyfill" />
+    <MESSAGE value="添加ReadMe" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加ReadMe" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/yarn.lock">
@@ -609,8 +624,8 @@
     <entry file="file://$PROJECT_DIR$/ReadMe.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="621">
-            <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <first_editor relative-caret-position="216">
+            <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
           </first_editor>
           <second_editor />
         </state>
