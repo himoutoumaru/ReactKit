@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 var Dashboard = require('webpack-dashboard');
 // var DashboardPlugin = require('webpack-dashboard/plugin');
 // var dashboard = new Dashboard();
@@ -90,6 +90,10 @@ module.exports = {
             VERSION: JSON.stringify('1.0'),
         }),
         new BundleAnalyzerPlugin(),
+        new CopyWebpackPlugin([{
+            from: ROOT_PATH + '/config.js',
+            to: ROOT_PATH + '/dist'
+        }]),
         // new DashboardPlugin(dashboard.setData)
     ]
 };

@@ -8,10 +8,17 @@ ReactKit是一个整合了React、Redux、React-Router的脚手架，
 ```$xslt
 yarn start     开发环境
 yarn run build 打包发布
+yarn server    启动json-server
 ```
+
+
 # 目录结构
 
+config.js:挂载到windows下的全局配置
+
 public:存放静态资源文件
+
+server:存放JSON-Server使用的模拟数据
 
 src/actions:存放redux的action
 
