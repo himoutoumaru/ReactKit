@@ -1,27 +1,59 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route, Redirect, Link} from 'react-router-dom';
-import Home from '../containers/Home/Index'
-import Sample from '../containers/Sample/Index'
+import {Icon, Layout, Menu} from 'antd';
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import Home from "../containers/Home";
+import Sample from "../containers/Sample";
+import {browserHistory} from 'react-router';
 
+const {
+    Header, Content, Footer, Sider,
+} = Layout;
+
+function linkTo(item) {
+    browserHistory.push(item.key);
+}
 
 const Routes = () => (
-    <div className="app">
+    <Router>
+        <Layout style={{height: '100%'}}>
+            <Sider
+                breakpoint="lg"
+                collapsedWidth="0"
+                onBreakpoint={(broken) => {
+                    console.log(broken);
+                }}
+                onCollapse={(collapsed, type) => {
+                    console.log(collapsed, type);
+                }}
+            >
+                <div style={{height: '32px', margin: '16px', background: 'rgba(255,255,255,.2)'}}/>
+                <Menu theme="dark" mode="inline"
+                      defaultSelectedKeys={['1']} onClick={linkTo}>
+                    <Menu.Item key="1">
+                        <Icon type="user"/>
+                        <span className="nav-text">主页</span>
+                    </Menu.Item>
+                </Menu>
+            </Sider>
+            <Layout>
+                <Header style={{background: '#fff', padding: 0}}/>
+                <Content style={{margin: '24px 16px 0'}}>
+                    <div style={{overflow: 'scroll', padding: 24, background: '#fff', minHeight: 360}}>
+                        <div>
+                            <Switch>
+                                <Route path="/" exact component={Home}/>
+                                <Route path="/sample" exact component={Sample}/>
+                            </Switch>
+                        </div>
 
-        <Router>
-            <div>
-                <Link to={'/'}>首页</Link>
-                <span>    </span>
-                <Link to={'/sample'}>测试页</Link>
-                <Switch>
-
-                    <Route path="/" exact component={Home}/>
-                    <Route path="/sample" exact component={Sample}/>
-                    {/*<Route path='/404' component={NotFound} />*/}
-                    {/*<Redirect from='*' to='/404' />*/}
-                </Switch>
-            </div>
-        </Router>
-    </div>
+                    </div>
+                </Content>
+                <Footer style={{textAlign: 'center'}}>
+                    Ant Design ©2018 Created by Ant UED
+                </Footer>
+            </Layout>
+        </Layout>
+    </Router>
 );
 
 export default Routes;

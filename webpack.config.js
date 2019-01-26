@@ -44,56 +44,63 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
-                    {
-                        loader: 'style-loader'
-                    },
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            modules: true
-                        }
-                    }
+                    {loader: 'style-loader'},
+                    {loader: 'css-loader', options: {modules: true, importLoaders: 1}},
+                    {loader: 'postcss-loader'}
                 ],
-                exclude: path.resolve(ROOT_PATH, 'node_modules'),
+                exclude: /node_modules/
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    {loader: 'style-loader'},
+                    {loader: 'css-loader'}
+                ],
+                include: /node_modules/
             },
             {
                 test: /\.ts$/,
-                use: 'ts-loader',
-                exclude: path.resolve(ROOT_PATH, 'node_modules')
-            },
+                use:
+                    'ts-loader',
+                exclude:
+                    path.resolve(ROOT_PATH, 'node_modules')
+            }
+            ,
             {
                 test: /\.json$/,
-                loader: 'json-loader',
-                exclude: path.resolve(ROOT_PATH, 'node_modules')
-            },
+                loader:
+                    'json-loader',
+                exclude:
+                    path.resolve(ROOT_PATH, 'node_modules')
+            }
+            ,
             {
                 test: /\.less$/,
-                use: [{
-                    loader: 'style-loader'
-                }, {
-                    loader: 'css-loader'
-                }, {
-                    loader: 'less-loader'
-                }],
-                exclude: path.resolve(ROOT_PATH, 'node_modules')
+                loader:
+                    `style!css!less`,
+                include:
+                    path.resolve(__dirname, 'node_modules'),
             }
         ]
     },
     resolve: {
         extensions: ['.js', '.json', '.jsx', '.ts'],
-        modules: [APP_PATH, 'node_modules', path.resolve(ROOT_PATH, 'public')],
-    },
+        modules:
+            [APP_PATH, 'node_modules', path.resolve(ROOT_PATH, 'public')],
+    }
+    ,
 
     plugins: [
         new HtmlWebpackPlugin({template: './src/index.html'}),
         new webpack.DefinePlugin({
             VERSION: JSON.stringify('1.0'),
         }),
-        new BundleAnalyzerPlugin(),
+        // new BundleAnalyzerPlugin(),
         new CopyWebpackPlugin([{
             from: ROOT_PATH + '/config.js',
             to: ROOT_PATH + '/dist'
         }]),
         // new DashboardPlugin(dashboard.setData)
     ]
-};
+}
+;

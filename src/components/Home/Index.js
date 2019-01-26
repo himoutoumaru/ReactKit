@@ -1,33 +1,50 @@
 import React, {Component} from 'react';
+import {Card, Timeline} from 'antd';
+import { Button } from 'antd';
 
 export default class extends Component {
     constructor() {
         super();
-        this.add = this.add.bind(this);
-        this.load = this.load.bind(this);
     }
 
     componentDidMount() {
 
     }
 
-    load() {
-        this.props.sampleAction.load();
-    }
-
-    add() {
-        this.props.sampleAction.add(1);
-    }
-
     render() {
 
         return (
-            <div className="container">
-                {this.props.sample.count}
-                <p></p>
-                <button onClick={this.add}>测试</button>
-                <p></p>
-                <button onClick={this.load}>加载模拟数据</button>
+            <div>
+                <Timeline>
+                    <Timeline.Item>
+                        <Card
+                            title="创建服务现场 2015-09-01"
+                            type="inner"
+                            extra={<a href="#">更多</a>}
+                        >
+                            <p>创建服务现场 2015-09-01</p>
+                        </Card>
+                    </Timeline.Item>
+                    <Timeline.Item>
+                        <Card
+                            title="创建服务现场 2015-09-01"
+                            type="inner"
+                            extra={<a href="#">更多</a>}
+                        >
+                            <p>创建服务现场 2015-09-01</p>
+                        </Card>
+                    </Timeline.Item>
+                    <Timeline.Item>
+                        <Card
+                            title="创建服务现场 2015-09-01"
+                            type="inner"
+                            extra={<a href="#">更多</a>}
+                        >
+                            <p>创建服务现场 2015-09-01</p>
+                        </Card>
+                    </Timeline.Item>
+                </Timeline>
+                <Button type="primary" style={{width:'100%'}}>加载更多</Button>
             </div>
         )
     }
